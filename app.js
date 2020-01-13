@@ -10,6 +10,8 @@ app.listen(3000, () => console.log('server working'));
 app.use(express.static('public'));
 
 board.on('ready', function() {
+  console.log('arduino board ready');
+
   strip = new pixel.Strip({
     board: this,
     controller: 'FIRMATA',
@@ -17,10 +19,11 @@ board.on('ready', function() {
     gamma: 2.8 // set to a gamma that works nicely for WS2812
   });
 
-  strip.on('ready', function() {});
+  strip.on('ready', function() {
+    console.log('led strip ready');
+  });
 });
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
-
