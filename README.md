@@ -20,6 +20,8 @@ npm install -g nodebots-interchange
 interchange install git+https://github.com/ajfisher/node-pixel -a uno --firmata
 ```
 
+## [Documenation Examples](https://github.com/ajfisher/node-pixel#examples)
+
 ## Challenge
 
 1. Make all the led light go green.
